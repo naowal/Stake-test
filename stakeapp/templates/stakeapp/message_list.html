@@ -44,13 +44,88 @@
 
 <div class="container" style="margin-top:30px">
   <div class="row">
-   
+        <div class="col-sm-8"> Stake Message <br/>    
+            <ul class="list-group">
+                {% for post in posts %}
+                <li class="list-group-item">{{ post }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-sm-4">Command Button <br/>
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#popModal">Pop</button>
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#pushModal">Push</button> 
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#startatModal">InsertAt</button> 
+        </div>
   </div>
+   <!--Pop Modal -->
+   <div class="modal fade" id="popModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Pop Message</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p>Pop Message: </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          
+        </div>
+    </div>
+
+
+    <!--Push Modal -->
+    <div class="modal fade" id="pushModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Push Message</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p>Push Message: </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          
+        </div>
+    </div>
+
+    <!--StartAt Modal -->
+   <div class="modal fade" id="startatModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Start-At Command</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p>Start At: </p>
+              <p>Message: </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          
+        </div>
+    </div>
+
 </div>
 
-<div class="jumbotron text-center" style="margin-bottom:0">
-  <p>Naowal copyright 2018</p>
-</div>
-
+    <div class="jumbotron text-center" style="margin-top:30px">
+        <p>Naowal copyright 2018</p>
+    </div>
 </body>
 </html>

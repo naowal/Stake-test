@@ -1,6 +1,6 @@
 from django.db import models
-
 from django.utils import timezone
+
 
 class Message(models.Model):
     mid = models.AutoField(primary_key=True)
